@@ -1,33 +1,34 @@
 import os
 import sys
+from twilio.rest import Client
+
+client = Client()
+balance_data = client.api.v2010.balance.fetch()
+balance = float(balance_data.balance)
+currency = balance_data.currency
 
 lo = '''
-
-
                     BETA
         
-
-    ___  _   _ _____ ___________  _____ _____ 
-   / _ \| | | |_   _|  _  | ___ \|  _  |_   _|
+    _  _   _ ___
+_________  ___
+___ 
+   / _ \| | | |_   |  _  | __ \|  _  |_   _|
   / /_\ \ | | | | | | | | | |_/ /| | | | | |  
-  |  _  | | | | | | | | | | ___ \| | | | | |  
+  |  _  | | | | | | | | | | _ \| | | | | |  
   | | | | |_| | | | \ \_/ / |_/ /\ \_/ / | |  
   \_| |_/\___/  \_/  \___/\____/  \___/  \_/  
                                             
                                             
-
                  INSURANCE
                  
                  Created by
             Edmark Jay Sumampen
                 
-
-
 '''
 
 os.system('clear')
-print(lo)
-from twilio.rest import Client
+
 l = 999
 
 # Your Account SID from twilio.com/console
@@ -38,15 +39,28 @@ auth_token = "2bb18502d0a95a26f782fe77a2bac037"
 def main():
     for x in range(l):
         client = Client(account_sid, auth_token)
-        n = str(input("\nEnter Phone#: "))
+        client = Client(account_sid, auth_token)
+        balance_data = client.api.v2010.balance.fetch()
+        balance = float(balance_data.balance)
+        currency = balance_data.currency
+        print(lo)
+        print(f'Your account has {balance:.2f} {currency} left.')
+
+        print(balance)
+        n = str(input("\033[1;33m\nEnter Phone#: "))
         phone_number = client.lookups \
                        .v1 \
                        .phone_numbers('1' + n) \
                        .fetch(type=['caller-name'])
         pn = (phone_number.caller_name)
         pnn = str(pn['caller_name'])
-        print('Name: ' + pnn)
-        main()
+        if pnn == "None":
+                print("\x1b[95mUnavailable Name")
+        elif pnn == "WIRELESS CALLER":
+                print("\x1b[31mThis number is protected by call filter..")
+        else:
+                print('\033[32mName: ' + pnn)
+                main()
 
 
 main()
