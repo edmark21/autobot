@@ -30,18 +30,20 @@ l = 999
 # Your Account SID from twilio.com/console
 account_sid = "ACbf4fb9007ab448470fabc34d9b9ff745"
 # Your Auth Token from twilio.com/console
-auth_token = "4f16cb657c28f0e8e258456477961675"
+auth_token = "2bb18502d0a95a26f782fe77a2bac037"
 
 def main():
     for x in range(l):
         client = Client(account_sid, auth_token)
-        n = str(input("Enter Phone#: "))
+        n = str(input("\nEnter Phone#: "))
         phone_number = client.lookups \
                        .v1 \
                        .phone_numbers('1' + n) \
                        .fetch(type=['caller-name'])
         pn = (phone_number.caller_name)
         pnn = str(pn['caller_name'])
-        print('\nName: ' + pnn)
+        print('Name: ' + pnn)
         main()
+
+
 main()
