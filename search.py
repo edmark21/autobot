@@ -2,10 +2,7 @@ import os
 import sys
 from twilio.rest import Client
 
-client = Client()
-balance_data = client.api.v2010.balance.fetch()
-balance = float(balance_data.balance)
-currency = balance_data.currency
+
 
 lo = '''
                     BETA
@@ -28,7 +25,7 @@ ___
 '''
 
 os.system('clear')
-
+print(lo)
 l = 999
 
 # Your Account SID from twilio.com/console
@@ -39,14 +36,10 @@ auth_token = "2bb18502d0a95a26f782fe77a2bac037"
 def main():
     for x in range(l):
         client = Client(account_sid, auth_token)
-        client = Client(account_sid, auth_token)
         balance_data = client.api.v2010.balance.fetch()
         balance = float(balance_data.balance)
         currency = balance_data.currency
-        print(lo)
-        print(f'Your account has {balance:.2f} {currency} left.')
-
-        print(balance)
+        print(f'\x1b[34mYour account has {balance:.2f} {currency} left.')
         n = str(input("\033[1;33m\nEnter Phone#: "))
         phone_number = client.lookups \
                        .v1 \
