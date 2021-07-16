@@ -36,11 +36,11 @@ account_sid = "ACbf4fb9007ab448470fabc34d9b9ff745"
 auth_token = "2bb18502d0a95a26f782fe77a2bac037"
 
 def main():
+  client = Client(account_sid, auth_token)
+  balance_data = client.api.v2010.balance.fetch()
+  balance = float(balance_data.balance)
+  currency = balance_data.currency
     for x in range(l):
-        client = Client(account_sid, auth_token)
-        balance_data = client.api.v2010.balance.fetch()
-        balance = float(balance_data.balance)
-        currency = balance_data.currency
         print(f'\x1b[34mYour account has {balance:.2f} {currency} left.')
         n = str(input("\033[1;33m\nEnter Phone#: "))
         phone_number = client.lookups \
