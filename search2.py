@@ -4,7 +4,7 @@ from twilio.rest import Client
 
 
 
-lo = '''
+lo = '''\x1b[93m
                     Account Version
         
 
@@ -30,7 +30,7 @@ print(lo)
 l = 999
 
 # Your Account SID from twilio.com/console
-account_sid = input("Enter Username: ")
+account_sid = input("\x1b[96mEnter Username: ")
 # Your Auth Token from twilio.com/console
 auth_token = input("Enter Pass: ")
 
