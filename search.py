@@ -2,10 +2,8 @@ import os
 import sys
 from twilio.rest import Client
 
-
-
-lo = '''
-                    BETA
+lo = '''\x1b[93m
+                        Injected Version
         
 
       ___  _   _ _____ ___________  _____ _____ 
@@ -18,8 +16,7 @@ lo = '''
                                             
 
                                             
-                                            
-                 INSURANCE
+        
                  
                  Created by
             Edmark Jay Sumampen
