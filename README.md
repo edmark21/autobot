@@ -1,4 +1,4 @@
-![alt text](https://drive.google.com/file/d/1VsVLkM-KHQQiIDT02-cbTlnOs4DsoPoC/view?usp=sharing)
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
 
 # autobot
