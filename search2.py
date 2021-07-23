@@ -8,12 +8,16 @@ lo = '''\x1b[93m
                     Account Version
         
 
-      ___  _   _ _____ ___________  _____ _____ 
-     / _ \| | | |_   _|  _  | ___ \|  _  |_   _|
-    / /_\ \ | | | | | | | | | |_/ /| | | | | |  
-    |  _  | | | | | | | | | | ___ \| | | | | |  
-    | | | | |_| | | | \ \_/ / |_/ /\ \_/ / | |  
-    \_| |_/\___/  \_/  \___/\____/  \___/  \_/  
+
+           _    _ _______ ____  ____   ____ _______ 
+       /\  | |  | |__   __/ __ \|  _ \ / __ \__   __|
+      /  \ | |  | |  | | | |  | | |_) | |  | | | |   
+     / /\ \| |  | |  | | | |  | |  _ <| |  | | | |   
+    / ____ \ |__| |  | | | |__| | |_) | |__| | | |   
+   /_/    \_\____/   |_|  \____/|____/ \____/  |_|   
+                                                   
+                                                   
+ 
                                             
                                             
 
@@ -33,6 +37,8 @@ l = 999
 account_sid = input("\x1b[96mEnter Username: ")
 # Your Auth Token from twilio.com/console
 auth_token = input("Enter Pass: ")
+
+
 
 def main():
     client = Client(account_sid, auth_token)
@@ -54,6 +60,9 @@ def main():
                 print("\x1b[31mThis number is protected by call filter..")
         else:
                 print('\033[32mName: ' + pnn)
+                print('Address: ')
+                print('Age: ')
+                print('Company: ')
                 main()
 
 
