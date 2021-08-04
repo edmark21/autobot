@@ -3,7 +3,7 @@ import json,urllib.request
 import os, sys
 os.system('clear')
 lo = '''\033[1;33m
-                    V1
+                    Version 1
         
 
       ___  _   _ _____ ___________  _____ _____ 
