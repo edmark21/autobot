@@ -5,7 +5,7 @@ from twilio.rest import Client
 
 
 lo = '''\x1b[93m
-                    Account Version
+                       Version 2
         
 
 
@@ -60,9 +60,6 @@ def main():
                 print("\x1b[31mThis number is protected by call filter..")
         else:
                 print('\033[32mName: ' + pnn)
-                print('Address: ')
-                print('Age: ')
-                print('Company: ')
                 main()
 
 
