@@ -1,9 +1,9 @@
-import os
-import sys
-from twilio.rest import Client
 
-lo = '''\x1b[93m
-                        Injected Version
+import json,urllib.request
+import os, sys
+os.system('clear')
+lo = '''\033[1;33m
+                    V1
         
 
       ___  _   _ _____ ___________  _____ _____ 
@@ -16,43 +16,36 @@ lo = '''\x1b[93m
                                             
 
                                             
-        
+                                            
+                 
                  
                  Created by
             Edmark Jay Sumampen
                 
 '''
-
-os.system('clear')
 print(lo)
-l = 999
-
-# Your Account SID from twilio.com/console
-account_sid = "ACbf4fb9007ab448470fabc34d9b9ff745"
-# Your Auth Token from twilio.com/console
-auth_token = "2bb18502d0a95a26f782fe77a2bac037"
-
+#def acc():
+	
+#c = input("\33[34mEnter code: ")
+#os.system('clear')
 def main():
-    client = Client(account_sid, auth_token)
-    balance_data = client.api.v2010.balance.fetch()
-    balance = float(balance_data.balance)
-    currency = balance_data.currency
-    for x in range(l):
-        print(f'\x1b[34mYour account has {balance:.2f} {currency} left.')
-        n = str(input("\033[1;33m\nEnter Phone#: "))
-        phone_number = client.lookups \
-                       .v1 \
-                       .phone_numbers('1' + n) \
-                       .fetch(type=['caller-name'])
-        pn = (phone_number.caller_name)
-        pnn = str(pn['caller_name'])
-        if pnn == "None":
-                print("\x1b[95mUnavailable Name")
-        elif pnn == "WIRELESS CALLER":
-                print("\x1b[31mThis number is protected by call filter..")
-        else:
-                print('\033[32mName: ' + pnn)
-                main()
-
-
+  c = input("Enter code: ")
+  for x in range(20):
+    print("\x1b[34m\ncredits: ", x ,"/ 20")
+    n = input("\033[1;33mEnter number#: ")
+    data = urllib.request.urlopen("https://trial.serviceobjects.com/gppl2/api.svc/PhoneInfo/"+n+"/full/"+c+"?format=json").read()
+    output = json.loads(data)
+    
+    d = (output['PhoneInfo']['Provider'])
+    dd = (output['PhoneInfo']['Contacts'])
+    print ('\033[32m\nName: '+dd[0]['Name'])
+    print ("Steet: "+dd[0]['Address'])
+    print ("City: "+dd[0]['City'])
+    print ("State: "+dd[0]['State'])
+    main()
+    
 main()
+
+
+#WS77-RMB3-HQP1 
+
