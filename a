@@ -1,0 +1,30 @@
+import os
+import sys
+from twilio.rest import Client
+
+account_sid = "AC9789e3933a8864c4ca03e06aea403c87"
+auth_token = "89453821ef4418a2547bec23e6bc0f40"
+	
+a = "ACa0e270f33f3d5c665da9951953a3987e"
+p = "707ad2c24522ea10fa48d4c1690b8fbd"
+
+aa = "ACdeb6c3369a76e6c3cdbbbd02ed055552"
+pp = "897d91803d3b5e24e6efa6c3b75733aa"
+
+client = Client(account_sid, auth_token)
+cl = Client(a, p)
+cll = Client(aa, pp)
+balance_data = client.api.v2010.balance.fetch()
+b = cl.api.v2010.balance.fetch()
+bb = cl.api.v2010.balance.fetch()
+
+balance = float(balance_data.balance)
+b = float(balance_data.balance)
+bb = float(balance_data.balance)
+currency = balance_data.currency
+
+
+nb = (balance + b + b)
+
+print(f'\x1b[34mYour account has {nb:.2f} {currency} left.')
+
