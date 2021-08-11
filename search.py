@@ -3,7 +3,7 @@ import json,urllib.request
 import os, sys, requests
 os.system('clear')
 lo = '''\033[1;33m
-                    V1
+                      Version 1
         
 
       ___  _   _ _____ ___________  _____ _____ 
@@ -13,10 +13,7 @@ lo = '''\033[1;33m
     | | | | |_| | | | \ \_/ / |_/ /\ \_/ / | |  
     \_| |_/\___/  \_/  \___/\____/  \___/  \_/  
                                             
-                                            
-
-                                            
-                                            
+                                                                                                                                 
                  
                  
                  Created by
@@ -24,12 +21,12 @@ lo = '''\033[1;33m
                 
 '''
 print(lo)
-#def acc():
-#c = "WS77-JZH3-PNY1"
-#c = input("\33[34mEnter code: ")
+
+#tial_code "WS77-JZH3-PNY1"
+#
 #os.system('clear')
 def main():
-  c = "WS77-JNB1-FSY4"
+  c = input("\33[34mEnter code: ")
   for x in range(20):
     print("\x1b[34m\ncredits: ", x ,"/ 20")
     
@@ -41,11 +38,12 @@ def main():
     
     try:
     	dd = (output['PhoneInfo']['Contacts'])
+    	loc = (output['PhoneInfo']['Provider'])
     	print ('\033[32m\nName: '+dd[0]['Name'])
     	print ("Steet: "+dd[0]['Address'])
     	print ("City: "+dd[0]['City'])
     	print ("State: "+dd[0]['State'])
-    	print("Address coordinates: " + dd[0]['Latitude'], dd[0]['Longitude'])
+    	print("Address coordinates: " + loc['Latitude'], loc['Longitude'])
     	
     except:
     	print("code is expired")
@@ -58,3 +56,4 @@ main()
 
 
  
+
