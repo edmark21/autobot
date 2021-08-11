@@ -19,10 +19,12 @@ $ pip3 install twilio
 
 (run the program by typing:)
 
+(version 1)
 $ python3 search.py
 
 or
 
+(version 2)
 $ python3 search2.py
 
 
