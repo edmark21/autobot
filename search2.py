@@ -7,7 +7,7 @@ from twilio.rest import Client
 	
 	
 gml = '''
-                    	V1
+                     	Version 2
         
 
       ___  _   _ _____ ___________  _____ _____ 
@@ -29,7 +29,7 @@ gml = '''
 '''
 
 lo = '''
-                    V1
+                     Version 2
         
 
       ___  _   _ _____ ___________  _____ _____ 
@@ -55,9 +55,9 @@ print(lo)
 l = 999
 
 # Your Account SID from twilio.com/console
-account_sid = "ACc26bb1a52a461e9e53af02d909c893bc"
+account_sid = "AC46d7644a4f2110191428d4e0dc5e8ed2"
 # Your Auth Token from twilio.com/console
-auth_token = "fc9a80d81f7b73a5934dd0ea8215b26f"
+auth_token = "1614cc108fdfd9f90221e6ba807bdc45"
 
 	
 	
@@ -104,15 +104,19 @@ def gm():
 		ggg = (gg['ekata_reverse_phone']['result'])
 		gggg = (ggg['current_addresses'])
 		ggggg = (ggg['belongs_to'])
-		print("\033[32m\nName: ", ggggg['name'])
-		tf = (ggggg['age_range']['to'])
-		print("Age: ",ggggg['age_range']['from'], "-", tf)
-		print("Gender: ", ggggg['gender'])
-		print("Street: ", gggg[0]['street_line_1'])
-		print("City: ", gggg[0]['city'])
-		print("Address Coordinates: ",  gggg[0]['lat_long']['latitude'], gggg[0]['lat_long']['longitude'], "\n")
+		
+		
+		try:
+			print("\033[32m\nName: ", ggggg['name'])
+			print("Age: ",ggggg['age_range']['from'], "-", ggggg['age_range']['to'])
+			print("Gender: ", ggggg['gender'])
+			print("Street: ", gggg[0]['street_line_1'])
+			print("City: ", gggg[0]['city'])
+			print("Address Coordinates: ",  gggg[0]['lat_long']['latitude'], gggg[0]['lat_long']['longitude'], "\n")
 			
-		gm()
+			gm()
+		except:
+			print("\x1b[31mCant find the info of this person")
 
 godmode = input("\x1b[31mEnter God Mode [y/n]: ")
 if godmode == "y":
