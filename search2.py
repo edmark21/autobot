@@ -55,11 +55,9 @@ print(lo)
 l = 999
 
 # Your Account SID from twilio.com/console
-account_sid = "AC46d7644a4f2110191428d4e0dc5e8ed2"
+account_sid = input("user: ")
 # Your Auth Token from twilio.com/console
-auth_token = "1614cc108fdfd9f90221e6ba807bdc45"
-
-	
+auth_token = input("pass: ")
 	
 
 def main():
