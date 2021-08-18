@@ -202,14 +202,18 @@ def v2():
             gmm()
         data = urllib.request.urlopen("https://trial.serviceobjects.com/gppl2/api.svc/PhoneInfo/"+n+"/full/"+c+"?format=json").read()
         output = json.loads(data)
+        
         try:
             dd = (output['PhoneInfo']['Contacts'])
             loc = (output['PhoneInfo']['Provider'])
             print ('\033[32m\n Name: '+dd[0]['Name'])
+            results = geocoder.reverse_geocode(loc['Latitude'], loc['Longitude'])
             print (" Steet: "+dd[0]['Address'])
             print (" City: "+dd[0]['City'])
             print (" State: "+dd[0]['State'])
-            print(" Address coordinates: " + loc['Latitude'], loc['Longitude'])
+            print(" State: ", results[0]['components']['state'])
+            print(" Zipcode: ", results[0]['components']['postcode'])
+            print("\n Address coordinates: " + loc['Latitude'], loc['Longitude'])
 
         except:
             print(" The code is not working!")
