@@ -19,13 +19,13 @@ $ pip3 install twilio
 
 (run the program by typing:)
 
-(version 1)
-$ python3 search.py
 
-or
+$ python3 autobot.py
 
-(version 2)
-$ python3 search2.py
+
+
+
+
 
 
 enjoyyy....
