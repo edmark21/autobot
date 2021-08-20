@@ -15,7 +15,9 @@ $ git clone https://github.com/edmark21/autobot
 
 $ cd autobot
 
-$ pip3 install twilio
+$ pip3 install --upgrade pip
+
+$ pip3 install -r requirements.txt
 
 (run the program by typing:)
 
