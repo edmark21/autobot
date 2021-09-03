@@ -1,4 +1,3 @@
-![Screenshot](Screenshot_20210811-180130_1.png)
 ![Screenshot](Screenshot_20210818-122603_1.png)
 ![Screenshot](Screenshot_20210811-180225_1.png)
 
