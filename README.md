@@ -30,7 +30,7 @@ pip3 install -r requirements.txt
 
 
 
-#### Console cloud
+#### Run the program
 ```bash
 python3 autobot.py
 ```
