@@ -9,25 +9,36 @@ helps you to identify phone numbers, the name associated with that number and ev
 
 How to use?
 
-Installation
+## Installation
+#### Console cloud
+```bash
+git clone https://github.com/edmark21/autobot
+```
 
-$ git clone https://github.com/edmark21/autobot
+```bash
+cd autobot
+```
 
-$ cd autobot
+```bash
+pip3 install --upgrade pip
+```
 
-$ pip3 install --upgrade pip
-
-$ pip3 install -r requirements.txt
-
-(run the program by typing:)
-
-
-$ python3 autobot.py
-
-
-
-
-
+```bash
+pip3 install -r requirements.txt
+```
 
 
-enjoyyy....
+
+
+#### Console cloud
+```bash
+python3 autobot.py
+```
+
+
+
+
+
+
+
+
