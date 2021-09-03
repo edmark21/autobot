@@ -7,10 +7,10 @@
 ## Description
 helps you to identify phone numbers, the name associated with that number and even their addresses. 
 
-How to use?
+
 
 ## Installation
-#### Console cloud
+#### Google cloud
 ```bash
 git clone https://github.com/edmark21/autobot
 ```
