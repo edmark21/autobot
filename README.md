@@ -3,7 +3,7 @@
 ![Screenshot](Screenshot_20210811-180225_1.png)
 
 # Autobot
-* Written by: Edmark Jay Sumampen
+
 
 <br/>
 
@@ -12,7 +12,8 @@ helps you to identify phone numbers, the name associated with that number and ev
 
 
 
-## Installation
+## Installation 
+
 #### Google cloud
 ```bash
 git clone https://github.com/edmark21/autobot
