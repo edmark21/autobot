@@ -80,7 +80,7 @@ lo = '''\33[34m
 
 '''
 
-os.system("cls")
+os.system("clear")
 
 
 def auto():
@@ -88,7 +88,7 @@ def auto():
     try:
         p = input("\n \33[93mEnter number: \33[0m")
         if p == "menu":
-            os.system("cls")
+            os.system("clear")
             gmm()
 
         try:
@@ -353,7 +353,7 @@ def autoe():
     try:
         p = input("\n \33[93mEnter number: \33[0m")
         if p == "menu":
-            os.system("cls")
+            os.system("clear")
             gmm()
 
         try:
@@ -618,7 +618,7 @@ def autoe():
 
 
 def name():
-    os.system("cls")
+    os.system("clear")
     p = input("\n \33[93mEnter fullname: ")
     if p == "menu":
         sugod()
@@ -649,7 +649,7 @@ def name():
 
 def phone():
     p = input("\n \33[93mEnter number: ")
-    os.system('cls')
+    os.system('clear')
 
     if p == "menu":
         sugod()
@@ -729,7 +729,7 @@ def phone():
 
 
 def sugod():
-    os.system("cls")
+    os.system("clear")
     print(loo)
     try:
         url = requests.get(
@@ -742,15 +742,15 @@ def sugod():
         menu = input("\n \33[93mSelect option [1-2]: ")
 
         if menu == "1":
-            os.system('cls')
+            os.system('clear')
             phone()
 
         elif menu == "2":
-            os.system('cls')
+            os.system('clear')
             name()
 
         elif menu == "main":
-            os.system('cls')
+            os.system('clear')
             gmm()
 
         else:
@@ -759,7 +759,7 @@ def sugod():
     except:
         print(" \x1b[31mKey status is Down = Please Update ur key")
         input(" Press Enter to Continue.....")
-        os.system("cls")
+        os.system("clear")
         gmm()
 
 
@@ -786,13 +786,13 @@ def gmm():
     godmode = input("\x1b[31m Select Option: \033[32m")
 
     if godmode == '1':
-        os.system('cls')
+        os.system('clear')
         print(lo)
         os.system('mode con: cols=42 lines=17')
         auto()
 
     elif godmode == '2':
-        os.system('cls')
+        os.system('clear')
         af = open("username.txt", "w")
         fa = open("passwd.txt", "w")
         u = input(" enter user: ")
@@ -802,47 +802,47 @@ def gmm():
         af.close()
         fa.close()
         input(" Please reopen the app!")
-        os.system('cls')
+        os.system('clear')
         gmm()
 
     elif godmode == "key":
-        os.system('cls')
+        os.system('clear')
         af = open("key.txt", "w")
         u = input(" enter key: ")
         af.write(u)
         af.close()
         input(" Please reopen the app!")
-        os.system('cls')
+        os.system('clear')
         gmm()
 
     elif godmode == '3':
         os.system('mode con: cols=43 lines=10')
-        os.system('cls')
+        os.system('clear')
         print("\033[32m\n User: ", a)
         print(" Pass: ", t)
         input(" \n\n\n\n press Enter to continue....")
-        os.system('cls')
+        os.system('clear')
         gmm()
 
     elif godmode == '4':
-        os.system('cls')
+        os.system('clear')
         print(about)
         input("\n    press Enter to continue....")
-        os.system('cls')
+        os.system('clear')
         gmm()
 
     elif godmode == "search":
-        os.system('cls')
+        os.system('clear')
         sugod()
 
     elif godmode == "email":
-        os.system("cls")
+        os.system("clear")
         autoe()
 
     else:
         print(" Please select from [1-4] option")
         input("\n Please Enter to continue...")
-        os.system('cls')
+        os.system('clear')
         gmm()
 
 
