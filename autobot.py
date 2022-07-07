@@ -1,9 +1,9 @@
 from twilio.rest import Client
-import json, urllib.request, os
+import json, urllib.request
 import os.path
 import requests
 import bs4
-import json, re
+import json, re, os
 
 f = open("username.txt", "r")
 ff = open("passwd.txt", "r")
@@ -80,7 +80,7 @@ lo = '''\33[34m
 
 '''
 
-os.system("clear")
+os.system('clear')
 
 
 def auto():
@@ -765,7 +765,7 @@ def sugod():
 
 def gmm():
 
-    os.system('mode con: cols=51 lines=24')
+    #os.system('mode con: cols=51 lines=24')
 
     print(lo)
     try:
