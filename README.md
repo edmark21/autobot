@@ -14,6 +14,8 @@ helps you to identify phone numbers, the name associated with that number and ev
 ## Installation 
 
 #### Google cloud https://console.cloud.google.com/
+####  click Activate Shell Button Activate Cloud Shell icon at the top of the Google Cloud console window its the center between free trial status and notification.
+
 ```bash
 git clone https://github.com/edmark21/autobot
 ```
