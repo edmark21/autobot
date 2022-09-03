@@ -37,9 +37,7 @@ pip3 install -r requirements.txt
 
 #### Run the program
 
-```bash
-cd autobot
-```
+
 ```bash
 python3 autobot.py
 ```
