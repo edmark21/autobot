@@ -788,7 +788,7 @@ def gmm():
     if godmode == '1':
         os.system('clear')
         print(lo)
-        os.system('mode con: cols=42 lines=17')
+        
         auto()
 
     elif godmode == '2':
@@ -816,7 +816,7 @@ def gmm():
         gmm()
 
     elif godmode == '3':
-        os.system('mode con: cols=43 lines=10')
+        
         os.system('clear')
         print("\033[32m\n User: ", a)
         print(" Pass: ", t)
